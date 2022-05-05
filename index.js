@@ -20,7 +20,7 @@ body.addEventListener("click", function (event) {
     var index = event.target.getAttribute("index");
     hienThiPopUpEdit(index, data[index]);
   }
-  if (event.target.matches(".btn-adding")) {
+  if (event.target.matches("#add-cart")) {
     addCart(event);
   }
   if (event.target.matches("#luuChinhSua")) {

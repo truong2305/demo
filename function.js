@@ -13,18 +13,23 @@ function renderData(_idDocument, _html) {
          for(var i =0; i< _arr.length; i++) {
              html += '<div class="_item"><b class="tit" attr="'+_arr[i].id+'">' + _arr[i].ten + '</b>'+
              '<span>Đã được đặt:'+ _arr[i].soLuotDatHang +' | số lượt thích:'+ _arr[i].luotThich +'</span>'
-             +'<div data="'+_arr[i].id+'" class="btn-adding">+</div> <div data="'+i+'" class="btn-xoa-row btn-adding">-</div>' 
+             +'<div data="'+_arr[i].id+'" class="btn-adding" id="add-cart">+</div> <div data="'+i+'" class="btn-xoa-row btn-adding">-</div>' 
              +' <div index="'+i+'" class="btn-edit-row btn-adding">s</div></div>';
          }
      }
      return html;
  }
  
-function checkCart(el) {
+function checkCart(el, r) {
     const cartBody = document.getElementById("giohang-body")
+    const cartFooter = document.getElementById("giohang-footer")
     if(arrCart.length < 1) {
         cartBody.innerHTML = "<b>Hiện tại chưa có đơn đặt hàng!</b>"
-    } else cartBody.innerHTML = el
+        cartFooter.innerHTML = ""
+    } else {
+        cartBody.innerHTML = el
+        cartFooter.innerHTML = `<b>Tổng : ${r}</b>`
+    }
 }
 
  function deleteArray(_index, arr) {

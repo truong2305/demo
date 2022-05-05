@@ -1,4 +1,5 @@
 
+
 const addCart =  (event) => {
     const id = event.target.getAttribute("data");
     const  newData = data.find(item => item.id === id)

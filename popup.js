@@ -23,7 +23,7 @@ body.addEventListener('click', function(e) {
         console.log("soLuotThich : "+ soLuotThich)
         console.log("giaTien : "+ giaTien)
         var _temp =  {
-                        id: null, 
+                        id: tenSanPham, 
                         ten: tenSanPham, 
                         giaTien: giaTien,
                         soLuotDatHang: 999, 
